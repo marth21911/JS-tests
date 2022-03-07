@@ -105,19 +105,44 @@
 //log san jose, log seattle, log burbank san jose--confirmed
 
 
-console.log(makeDojo("Chicago", 65));
-console.log(makeDojo("Berkeley", 0));
-function makeDojo(name, students){
-    const dojo = {};
-    dojo.name = name;
-    dojo.students = students;
-    if(dojo.students > 50){
-        dojo.hiring = true;
-    }
-    else if(dojo.students <= 0){
-        dojo = "closed for now";
-    }
-    return dojo;
-}
+// console.log(makeDojo("Chicago", 65));
+// console.log(makeDojo("Berkeley", 0));
+// function makeDojo(name, students){
+//     const dojo = {};
+//     dojo.name = name;
+//     dojo.students = students;
+//     if(dojo.students > 50){
+//         dojo.hiring = true;
+//     }
+//     else if(dojo.students <= 0){
+//         dojo = "closed for now";
+//     }
+//     return dojo;
+// }
 //{Chicago, is hiring} {Berkeley closed for now}  confirmed
+
+
+
+const person = { 
+        firstName: 'Bob', 
+        lastName: 'Marley', 
+        email: 'bob@marley.com', 
+        password: 'sekureP@ssw0rd9', 
+        username: 'barley', 
+        createdAt: 1543945177623
+    };
+    const animals = ['horse', 'dog', 'fish', 'cat', 'bird'];
+// BEFORE ES6
+// var email = person.email;
+// var firstAnimal = animals[0];
+    // AFTER ES6
+const { email } = person;
+const [firstAnimal] = animals;
+console.log(email);
+// => bob@marley.com
+console.log(firstAnimal);
+// => horse
+const { email, password } = person;
+const [firstAnimal, secondAnimal, thirdAnimal] = animals;
+
 
