@@ -17,6 +17,17 @@ class Ninja{
     }
 }
 const guin = new Ninja("Guinevere",100);
+class Sensei extends Ninja{
+    constructor(name){
+        super(name, 200,10,10)
+        this.wisdom = 10
+    }
+    speakWisdom() {
+        this.drinkSake, console.log("A turd in your pants is worth 3 in the pot.")
+    }
+}
+const zoe = new Sensei("Zoe");
+zoe.speakWisdom();
 console.log(guin)
 guin.sayName();
 guin.showStats();
